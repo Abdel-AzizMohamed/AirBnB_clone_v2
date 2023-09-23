@@ -126,7 +126,6 @@ class HBNBCommand(cmd.Cmd):
         kwargs = {}
         for arg in args:
             arg_split = arg.split("=")
-            print(arg_split)
             inst_key = arg_split[0]
             if arg_split[1][0] == '"':
                 inst_value = arg_split[1].replace('"', "")
