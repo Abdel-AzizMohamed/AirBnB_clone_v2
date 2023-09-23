@@ -135,6 +135,8 @@ class HBNBCommand(cmd.Cmd):
                 inst_value = int(arg_split[1])
             setattr(new_instance, inst_key, inst_value)
 
+        new_instance.save()
+
         storage.save()
         print(new_instance.id)
         storage.save()
