@@ -22,7 +22,7 @@ def do_deploy(archive_path):
         run("mv {0}{1}/web_static/* {0}{1}/".format(path, name))
         run("rm -rf {}{}/wen_static".format(path, name))
         run("rm -rf /data/web_static/current")
-        run("ls -s {}{}/ /data/web_static/current".format(path, name))
+        run("ln -s {}{}/ /data/web_static/current".format(path, name))
 
         return True
     except:
