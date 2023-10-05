@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """Fabric script that generates a .tgz archive"""
-import os
+import os.path
 from fabric.api import local, put, run, env
 from datetime import datetime
+
+
 env.hosts = ["100.25.21.246", "54.221.183.98"]
 
 
