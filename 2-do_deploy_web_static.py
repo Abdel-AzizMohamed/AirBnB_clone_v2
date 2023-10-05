@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Fabric script that generates a .tgz archive"""
 import os
-from fabric.api import local
+from fabric.api import put, run, env
 env.hosts = ["100.25.21.246", "54.221.183.98"]
 
 
@@ -25,5 +25,5 @@ def do_deploy(archive_path):
         run("ls -s {}{}/ /data/web_static/current".format(path, name))
 
         return True
-    except fabric.exceptions.GroupException:
+    except:
         return False
