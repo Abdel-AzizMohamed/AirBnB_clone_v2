@@ -25,5 +25,5 @@ def do_deploy(archive_path):
         run("ls -s {}{}/ /data/web_static/current".format(path, name))
 
         return True
-    except:
+    except fabric.exceptions.GroupException:
         return False
